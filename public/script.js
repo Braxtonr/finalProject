@@ -6,7 +6,6 @@ async function showTeams(){
     leagueDiv.innerHTML = "";
     console.log(teams);
     for(i in teams){
-        console.log(teams[i]);
         leagueDiv.appendChild(getTeamElem(teams[i]));
     }
 }
@@ -35,6 +34,7 @@ function showForm(){
 
 
 async function addTeam(){
+    let teamForm = document.getElementById("add-team");
     const name = document.getElementById("team-name").value;
     const location = document.getElementById("team-location").value;
     const conference = document.getElementById("team-conference").value;
@@ -66,7 +66,9 @@ async function addTeam(){
 
     let result = await response.json();
     feedbackP.innerHTML = "Successfully Added Team to League";
-    feedbackP.classList.add("success");    
+    feedbackP.classList.add("success"); 
+    teamForm.classList.add("hidden"); 
+    showTeams();  
 }
 
 window.onload = function(){

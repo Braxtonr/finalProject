@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost/nba-league', {useUnifiedTopology:true, use
 const teamSchema = new mongoose.Schema({
     name: String,
     location: String,
-    conference: Number,
+    conference: String,
     arena:String,
     colors:[String]
 });
@@ -34,7 +34,7 @@ function validateTeam(team){
         colors:Joi.allow()
     };
 
-    return Joi.validate(team);
+    return Joi.validate(team, schema);
 }
 
 app.post('/api/nba-league', (req,res)=>{
