@@ -8,12 +8,14 @@
 
     <body>
         <header id = "main-header">
+            <div>
                 <h1>Braxton's Basketball League</h1> 
-                <button id = "show-form">+</button>
+            </div>
         </header>
-        <div id = "banner">
-            <img id = "banner" src = "">
-        </div>
+            <nav id = "main-nav">
+                <a onclick="showAddForm()">Add a Team</a>
+            </nav>
+        <div id = "league">
         <div id="add-team" class="hidden">
                 <p id="feedback" class="hidden"></p>
                 <div id = "form-content">
@@ -41,9 +43,40 @@
                 <button id="btn-add-team">Add Team</button>
                 </div>
             </div>
-        <h2>Current BBL Teams</h2>
-        <div id = "league">
+
+        <div id = "content">
+            <h2>Current BBL Teams</h2>
 
         </div>
+        
+        <form id = "edit-team">
+            <p id="feedback" class="hidden"></p>
+                <div id = "form-content">
+                <h2>Make Your Changes</h2>
+                <span id = "edit-team-id" class = "hidden"></span>
+                <p>
+                <label for="edit-team-name">Name:</label>
+                <input type="text" id="edit-team-name">
+                </p>
+                <p>
+                <label for="edit-team-location">Location:</label>
+                <input type="text" id="edit-team-location">
+                </p>
+                <p>
+                <label for="edit-team-conference">Conference:</label>
+                <input type="text" id="edit-team-conference">
+                </p>
+                <p>
+                <label for="edit-team-arena">Arena:</label>
+                <input type="text" id="edit-team-arena">
+                </p>
+                <p>
+                <label for="edit-team-colors">Colors:</label>
+                <textarea rows="3" id="edit-team-colors"></textarea>
+                </p>
+                <button id="btn-edit-team">Save Changes</button>
+                </div>
+            </form>
+    </div>
     </body>
 </html>
