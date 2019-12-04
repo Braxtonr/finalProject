@@ -11,20 +11,16 @@
     text-align: center;
     font-size: 25px;
 }
-/* Banner */
-#banner {
-    display:flex;
-    justify-content: center;
-}
-
 .error {
     background: red;
     color: white;
+    text-align: center;
 }
 
 .success {
     background: darkgreen;
     color:white;
+    text-align: center;
 }
 
 .hidden {
@@ -100,6 +96,7 @@
 
 #main-nav:hover{
     cursor: pointer;
+    font-weight: bolder;
 }
 
 @keyframes color {

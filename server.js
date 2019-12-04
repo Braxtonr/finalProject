@@ -93,7 +93,6 @@ app.put('/api/nba-league/:id',(req,res)=>{
 });
 
 async function updateTeam(res, id, name, location, conference, arena, colors) {
-    //fist param: to find, second update
     const result = await Team.updateOne({_id:id},{
         $set:{
             name: name,
